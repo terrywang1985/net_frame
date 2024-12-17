@@ -1,0 +1,94 @@
+
+syntax = "proto3";
+package game;
+
+option go_package = "server/src/proto";
+
+message Position {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
+
+message Player {
+  string id = 1;
+  string name = 2;
+  Position position = 3;
+}
+
+message Room {
+  string id = 1;
+  string name = 2;
+  repeated Player players = 3;
+}
+
+message CreateRoomRequest {
+  string name = 1;
+}
+
+message CreateRoomResponse {
+  int32 ret = 1;
+  Room room = 2;
+}
+
+message JoinRoomRequest {
+  Player player = 1;
+  string roomId = 2;
+}
+
+message JoinRoomResponse {
+  int32 ret = 1;
+  Room room = 2;
+}
+
+message MoveRequest {
+  string playerId = 1;
+  Position position = 2;
+}
+
+message MoveResponse {
+  int32 ret = 1;
+  Room room = 2;
+}
+
+message LeaveRoomRequest {
+  string playerId = 1;
+}
+
+message LeaveRoomResponse {
+  int32 ret = 1;
+  Room room = 2;
+}
+
+enum ErrorCode {
+  OK = 0;
+  ROOM_NOT_FOUND = 1;
+  ROOM_FULL = 2;
+  PLAYER_NOT_FOUND = 3;
+  PLAYER_ALREADY_IN_ROOM = 4;
+}
+
+enum MessageId {
+  CREATE_ROOM_REQUEST = 0;
+  CREATE_ROOM_RESPONSE = 1;
+  JOIN_ROOM_REQUEST = 2;
+  JOIN_ROOM_RESPONSE = 3;
+  MOVE_REQUEST = 4;
+  MOVE_RESPONSE = 5;
+  LEAVE_ROOM_REQUEST = 6;
+  LEAVE_ROOM_RESPONSE = 7;
+}
+
+message Message {
+  string player = 1;
+  MessageId id = 2;
+  bytes data = 3;
+}
+
+
+
+
+
+
+
+

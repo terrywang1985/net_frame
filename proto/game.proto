@@ -60,6 +60,10 @@ message LeaveRoomResponse {
   Room room = 2;
 }
 
+message RoomStateNotification {
+  Room room = 1;
+}
+
 enum ErrorCode {
   OK = 0;
   ROOM_NOT_FOUND = 1;
@@ -77,10 +81,11 @@ enum MessageId {
   MOVE_RESPONSE = 5;
   LEAVE_ROOM_REQUEST = 6;
   LEAVE_ROOM_RESPONSE = 7;
+  ROOM_STATE_NOTIFICATION = 8;
 }
 
 message Message {
-  string player = 1;
+  string uuid = 1;
   MessageId id = 2;
   bytes data = 3;
 }

@@ -9,30 +9,56 @@ import (
 	pb "server/src/proto"
 )
 
-// 服务器监听和消息分发
 func handleConnection(conn net.Conn) {
+	connID := GenerateConnID(conn)
 	defer conn.Close()
+	defer GlobalManager.DeletePlayer(connID)
 
-	buffer := make([]byte, 1024)
-	for {
-		n, err := conn.Read(buffer)
-		if err != nil {
-			log.Println("Connection closed:", err)
-			return
+	player := GlobalManager.GetOrCreatePlayer(connID)
+
+	// 启动一个协程处理玩家发送的消息
+	go func() {
+		buffer := make([]byte, 1024)
+		for {
+			n, err := conn.Read(buffer)
+			if err != nil {
+				log.Println("Connection closed:", err)
+				player.QuitChan <- true
+				return
+			}
+
+			// 解析消息
+			var msg pb.Message
+			if err := proto.Unmarshal(buffer[:n], &msg); err != nil {
+				log.Println("Invalid message:", err)
+				continue
+			}
+
+			// 将消息发送到玩家的接收通道
+			player.RecvChan <- &msg
 		}
+	}()
 
-		// 解析消息
-		var msg pb.Message
-		if err := proto.Unmarshal(buffer[:n], &msg); err != nil {
-			log.Println("Invalid message:", err)
-			continue
+	// 启动一个协程处理玩家的响应消息
+	go func() {
+		for {
+			select {
+			case rspMsg := <-player.SendChan:
+				data, err := proto.Marshal(rspMsg)
+				if err != nil {
+					log.Println("Failed to marshal response:", err)
+					continue
+				}
+				if _, err := conn.Write(data); err != nil {
+					log.Println("Failed to write response:", err)
+					player.QuitChan <- true
+					return
+				}
+			case <-player.QuitChan:
+				return
+			}
 		}
-
-		// 临时示例玩家ID（实际应基于连接创建玩家）
-		player := GlobalManager.GetOrCreatePlayer(msg.Player)
-		player.MsgChan <- &msg
-		player.
-	}
+	}()
 }
 
 func main() {

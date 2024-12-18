@@ -15,7 +15,8 @@ type Player struct {
 	Name     string
 	Position *pb.Position
 	Room     *Room
-	MsgChan  chan *pb.Message // 玩家消息管道
+	RecvChan chan *pb.Message // 玩家收消息管道
+	SendChan chan *pb.Message // 玩家发消息管道
 	QuitChan chan bool        // 退出信号
 }
 
@@ -25,7 +26,8 @@ func NewPlayer(id string) *Player {
 		ID:       id,
 		Name:     "",
 		Position: &pb.Position{X: 0, Y: 0, Z: 0},
-		MsgChan:  make(chan *pb.Message, 10),
+		RecvChan: make(chan *pb.Message, 10),
+		SendChan: make(chan *pb.Message, 10),
 		QuitChan: make(chan bool),
 	}
 }
@@ -34,7 +36,7 @@ func NewPlayer(id string) *Player {
 func (p *Player) Run() {
 	for {
 		select {
-		case msg := <-p.MsgChan:
+		case msg := <-p.RecvChan:
 			// 处理消息
 			MsgHandler.PlayerHandle(p, msg)
 		case <-p.QuitChan:
@@ -42,6 +44,10 @@ func (p *Player) Run() {
 			return
 		}
 	}
+}
+
+func (p *Player) SendMessage(msg *pb.Message) {
+	p.SendChan <- msg
 }
 
 // HandleMoveRequest 处理移动请求
@@ -62,5 +68,6 @@ func (p *Player) HandleMoveRequest(data []byte) {
 			Room: &pb.Room{Id: p.Room.ID, Name: p.Room.Name},
 		}),
 	}
-	p.Room.Broadcast(p.ID, response)
+
+	p.RecvChan <- response
 }

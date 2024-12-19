@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"sync"
 
 	"google.golang.org/protobuf/proto"
 	pb "server/src/proto"
@@ -16,16 +17,23 @@ func handleConnection(conn net.Conn) {
 
 	player := GlobalManager.GetOrCreatePlayer(connID)
 
+	var wg sync.WaitGroup
+	wg.Add(2) // We have two goroutines to wait for
+
 	// 启动一个协程处理玩家发送的消息
 	go func() {
+		defer wg.Done()
 		buffer := make([]byte, 1024)
 		for {
+			log.Println("Waiting to read from connection...")
 			n, err := conn.Read(buffer)
 			if err != nil {
 				log.Println("Connection closed:", err)
 				player.QuitChan <- true
 				return
 			}
+
+			log.Printf("Read %d bytes from connection", n)
 
 			// 解析消息
 			var msg pb.Message
@@ -34,6 +42,8 @@ func handleConnection(conn net.Conn) {
 				continue
 			}
 
+			log.Printf("Received message: %v", msg)
+
 			// 将消息发送到玩家的接收通道
 			player.RecvChan <- &msg
 		}
@@ -41,6 +51,7 @@ func handleConnection(conn net.Conn) {
 
 	// 启动一个协程处理玩家的响应消息
 	go func() {
+		defer wg.Done()
 		for {
 			select {
 			case rspMsg := <-player.SendChan:
@@ -59,6 +70,8 @@ func handleConnection(conn net.Conn) {
 			}
 		}
 	}()
+
+	wg.Wait() // Wait for both goroutines to finish
 }
 
 func main() {

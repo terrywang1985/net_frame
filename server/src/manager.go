@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"sync"
+	"sync/atomic"
 )
 
 type Manager struct {
@@ -10,8 +11,14 @@ type Manager struct {
 	players sync.Map // 使用 sync.Map 来存储玩家
 }
 
+var roomCounter uint64
+
+func IncrementAndGetRoomCounter() uint64 {
+	return atomic.AddUint64(&roomCounter, 1)
+}
+
 // 创建房间
-func (rm *Manager) GetOrCreateRoom(id, name string) *Room {
+func (rm *Manager) GetOrCreateRoom(id uint64, name string) *Room {
 	room, loaded := rm.rooms.LoadOrStore(id, NewRoom(id, name)) // 从 sync.Map 获取房间，如果不存在则创建
 	// 如果房间是新创建的，则启动其协程
 	if !loaded {

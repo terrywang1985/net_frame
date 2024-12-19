@@ -47,6 +47,8 @@ var MsgHandler = NewMessageManager()
 
 // 注册所有消息回调
 func InitMessageHandlers() {
+	MsgHandler.PlayerRegister(pb.MessageId_CREATE_ROOM_REQUEST, (*Player).HandleCreateRoomRequest)
 	MsgHandler.PlayerRegister(pb.MessageId_MOVE_REQUEST, (*Player).HandleMoveRequest)
+	
 	MsgHandler.RoomRegister(pb.MessageId_MOVE_REQUEST, (*Room).HandleMoveRequest)
 }

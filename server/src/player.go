@@ -71,3 +71,30 @@ func (p *Player) HandleMoveRequest(data []byte) {
 
 	p.RecvChan <- response
 }
+
+func (p *Player) HandleCreateRoomRequest(data []byte) {
+	var req pb.CreateRoomRequest
+	if err := proto.Unmarshal(data, &req); err != nil {
+		log.Println("Failed to parse CreateRoomRequest:", err)
+		return
+	}
+
+	if p.Room != nil {
+		log.Printf("Player %s already in room %s", p.Name, p.Room.Name)
+		return
+	}
+
+	room := GlobalManager.GetOrCreateRoom(IncrementAndGetRoomCounter(), req.Name)
+	room.AddPlayer(p)
+
+	// 响应
+	response := &pb.Message{
+		Id: pb.MessageId_CREATE_ROOM_RESPONSE,
+		Data: mustMarshal(&pb.CreateRoomResponse{
+			Ret:  0,
+			Room: room.FillRoomMsg(),
+		}),
+	}
+
+	p.SendMessage(response)
+}

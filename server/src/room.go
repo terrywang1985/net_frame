@@ -9,7 +9,7 @@ import (
 )
 
 type Room struct {
-	ID       string
+	ID       uint64
 	Name     string
 	Players  map[string]*Player
 	MsgChan  chan *RoomMessage // 房间消息管道
@@ -23,7 +23,7 @@ type RoomMessage struct {
 }
 
 // 创建一个房间
-func NewRoom(id, name string) *Room {
+func NewRoom(id uint64, name string) *Room {
 	return &Room{
 		ID:       id,
 		Name:     name,

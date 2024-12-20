@@ -72,6 +72,25 @@ func (p *Player) HandleMoveRequest(data []byte) {
 	p.RecvChan <- response
 }
 
+func (p *Player) HandleGetRoomListRequest(data []byte) {
+	var req pb.GetRoomListRequest
+	if err := proto.Unmarshal(data, &req); err != nil {
+		log.Println("Failed to parse GetRoomListRequest:", err)
+		return
+	}
+
+	// 响应
+	response := &pb.Message{
+		Id: pb.MessageId_GET_ROOM_LIST_RESPONSE,
+		Data: mustMarshal(&pb.GetRoomListResponse{
+			Ret:   0,
+			Rooms: RoomsToProto(GlobalManager.GetAllRooms()),
+		}),
+	}
+
+	p.SendMessage(response)
+}
+
 func (p *Player) HandleCreateRoomRequest(data []byte) {
 	var req pb.CreateRoomRequest
 	if err := proto.Unmarshal(data, &req); err != nil {

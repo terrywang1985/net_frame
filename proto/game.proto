@@ -22,6 +22,20 @@ message Room {
   repeated Player players = 3;
 }
 
+message LoginRequest {
+}
+
+message LoginResponse {
+}
+
+message GetRoomListRequest {
+}
+
+message GetRoomListResponse {
+  int32 ret = 1;
+  repeated Room rooms = 2;
+}
+
 message CreateRoomRequest {
   string name = 1;
 }
@@ -73,15 +87,25 @@ enum ErrorCode {
 }
 
 enum MessageId {
-  CREATE_ROOM_REQUEST = 0;
-  CREATE_ROOM_RESPONSE = 1;
-  JOIN_ROOM_REQUEST = 2;
-  JOIN_ROOM_RESPONSE = 3;
-  MOVE_REQUEST = 4;
-  MOVE_RESPONSE = 5;
-  LEAVE_ROOM_REQUEST = 6;
-  LEAVE_ROOM_RESPONSE = 7;
-  ROOM_STATE_NOTIFICATION = 8;
+  LOGIN_REQUEST = 0;
+  LOGIN_RESPONSE = 1;
+
+  GET_ROOM_LIST_REQUEST = 2;
+  GET_ROOM_LIST_RESPONSE = 3;
+
+  CREATE_ROOM_REQUEST = 4;
+  CREATE_ROOM_RESPONSE = 5;
+
+  JOIN_ROOM_REQUEST = 6;
+  JOIN_ROOM_RESPONSE = 7;
+
+  MOVE_REQUEST = 8;
+  MOVE_RESPONSE = 9;
+
+  LEAVE_ROOM_REQUEST = 10;
+  LEAVE_ROOM_RESPONSE = 11;
+
+  ROOM_STATE_NOTIFICATION = 12;
 }
 
 message Message {

@@ -1,67 +1,97 @@
 ﻿using System;
-using System.Net.Sockets;
-using System.Text;
-using Google.Protobuf;
-using Game; // 这里的命名空间应与生成的C#代码中的命名空间一致
+using System.Threading.Tasks;
+using Game;
 
 class Program
 {
-    static void Main(string[] args)
+    static Player? player;
+    static async Task Main(string[] args)
     {
         string server = "127.0.0.1";
         int port = 12345;
 
         try
         {
-            using (TcpClient client = new TcpClient(server, port))
-            using (NetworkStream stream = client.GetStream())
+            using (var connection = new Connection(server, port))
             {
                 Console.WriteLine("Connected to server");
 
-                // 创建一个CreateRoomRequest消息
-                var createRoomRequest = new CreateRoomRequest
+                connection.RegisterMessageHandler(MessageId.RoomStateNotification, OnRoomStateNotification);
+                var listenTask = connection.ListenForNotificationsAsync();
+
+                // 创建玩家
+                player = new Player("Player1", connection);
+
+                // 获取房间列表
+                var getRoomListResponse = await player.GetRoomList();
+
+                if (getRoomListResponse.Rooms.Count > 0)
                 {
-                    Name = "Test Room"
-                };
+                    Console.WriteLine("Rooms:");
+                    foreach (var roomInfo in getRoomListResponse.Rooms)
+                    {
+                        Console.WriteLine($"- {roomInfo.Name}");
+                    }
 
-                // 序列化CreateRoomRequest消息
-                byte[] requestData = createRoomRequest.ToByteArray();
+                    var roomId = getRoomListResponse.Rooms[0].Id;
+                    var roomName = getRoomListResponse.Rooms[0].Name;
 
-                // 创建一个Message消息
-                var message = new Message
-                {
-                    Uuid = Guid.NewGuid().ToString(),
-                    Id = MessageId.CreateRoomRequest,
-                    Data = ByteString.CopyFrom(requestData)
-                };
+                    // 创建房间对象
+                    var room = new Room { Id = roomId, Name = roomName };
 
-                // 序列化Message消息
-                byte[] data = message.ToByteArray();
+                    // 玩家加入房间
+                    var joinRoomResponse = await player.JoinRoom(room);
 
-                // 发送消息
-                stream.Write(data, 0, data.Length);
-                Console.WriteLine("Message sent");
-
-                // 确认数据已发送
-                Console.WriteLine($"Sent {data.Length} bytes to server");
-
-                // 接收响应
-                byte[] buffer = new byte[1024];
-                int bytesRead = stream.Read(buffer, 0, buffer.Length);
-                if (bytesRead > 0)
-                {
-                    var response = Message.Parser.ParseFrom(buffer, 0, bytesRead);
-                    Console.WriteLine($"Received response: {response.Id}, {response.Uuid}");
+                    if (joinRoomResponse.Ret == (int)ErrorCode.Ok)
+                    {
+                        Console.WriteLine("Joined room successfully.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Failed to join room.");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("No data received from server.");
+                    Console.WriteLine("No rooms found. Creating a new room...");
+
+                    // 创建房间
+                    var createRoomResponse = await player.CreateRoom("Test Room");
+
+                    if (createRoomResponse.Ret == (int)ErrorCode.Ok)
+                    {
+                        Console.WriteLine("Room created successfully.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Failed to create room.");
+                    }
                 }
+
+                // 等待监听任务完成
+                await listenTask;
             }
         }
         catch (Exception e)
         {
             Console.WriteLine($"Exception: {e.Message}");
         }
+    }
+
+    static void OnRoomStateNotification(Message message)
+    {
+        var notification = RoomStateNotification.Parser.ParseFrom(message.Data);
+        if (player != null)
+        {
+            if (player.Room == null)
+            {
+                player.Room = new Room();
+            }
+            player.Room = notification.Room;
+        }
+
+        Console.WriteLine($"Received room state notification:");
+
+        Console.WriteLine($"Received room state notification:");
     }
 }

@@ -109,9 +109,10 @@ enum MessageId {
 }
 
 message Message {
-  string uuid = 1;
-  MessageId id = 2;
-  bytes data = 3;
+  string clientId = 1;   //客户端唯一标识
+  int32 msgSerialNo = 2; //消息序列号, 每条消息加1
+  MessageId id = 3;   //消息ID
+  bytes data = 4;   //消息体
 }
 
 

@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net"
 	"sync"
 	"sync/atomic"
 )
@@ -60,8 +61,8 @@ func (rm *Manager) GetAllRooms() []*Room {
 }
 
 // 创建玩家
-func (rm *Manager) GetOrCreatePlayer(id string) *Player {
-	player, loaded := rm.players.LoadOrStore(id, NewPlayer(id)) // 从 sync.Map 获取玩家，如果不存在则创建
+func (rm *Manager) GetOrCreatePlayer(id string, conn net.Conn) *Player {
+	player, loaded := rm.players.LoadOrStore(id, NewPlayer(id, conn)) // 从 sync.Map 获取玩家，如果不存在则创建
 
 	// 如果玩家是新创建的，则启动其协程
 	if !loaded {

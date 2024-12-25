@@ -76,9 +76,9 @@ func (r *Room) HandleMessage(msg *RoomMessage) {
 }
 
 // HandleMoveRequest 处理移动请求
-func (r *Room) HandleMoveRequest(data []byte) {
+func (r *Room) HandleMoveRequest(msg *pb.Message) {
 	var req pb.MoveRequest
-	if err := proto.Unmarshal(data, &req); err != nil {
+	if err := proto.Unmarshal(msg.GetData(), &req); err != nil {
 		log.Println("Failed to parse MoveRequest:", err)
 		return
 	}
@@ -89,7 +89,9 @@ func (r *Room) HandleMoveRequest(data []byte) {
 	log.Printf("Player %s moved to %+v", player.Name, player.Position)
 
 	noti := &pb.Message{
-		Id: pb.MessageId_ROOM_STATE_NOTIFICATION,
+		Id:          pb.MessageId_ROOM_STATE_NOTIFICATION,
+		MsgSerialNo: -1,
+		ClientId:    msg.ClientId,
 		Data: mustMarshal(&pb.RoomStateNotification{
 			Room: r.FillRoomMsg(),
 		}),

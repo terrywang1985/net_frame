@@ -68,13 +68,15 @@ func (p *Player) Run() {
 
 			// Process data in buffer
 			for {
+				log.Printf("Buffer length: %d, Buffer content: %v", len(buffer), buffer)
 				// Check if there is enough data to read the packet length
 				if len(buffer) < 4 {
+					log.Println("Not enough data to read the packet length, breaking out of inner loop")
 					break
 				}
 
 				// Read packet length
-				length := int(binary.BigEndian.Uint32(buffer[:4]))
+				length := int(binary.LittleEndian.Uint32(buffer[:4]))
 
 				// Check if there is enough data to read the full packet
 				if len(buffer) < 4+length {
@@ -110,7 +112,7 @@ func (p *Player) Run() {
 				}
 
 				length := make([]byte, 4)
-				binary.BigEndian.PutUint32(length, uint32(len(data)))
+				binary.LittleEndian.PutUint32(length, uint32(len(data)))
 
 				packet := append(length, data...)
 				if _, err := p.Conn.Write(packet); err != nil {
@@ -155,6 +157,7 @@ func (p *Player) SendMessage(msg *pb.Message) {
 }
 
 func (p *Player) SendResponse(srcMsg *pb.Message, responseData []byte) {
+
 	// 响应
 	response := &pb.Message{
 		Id:          srcMsg.GetId() + 1,      // Response ID is request ID + 1
@@ -162,6 +165,8 @@ func (p *Player) SendResponse(srcMsg *pb.Message, responseData []byte) {
 		ClientId:    srcMsg.GetClientId(),    // Use the same client ID
 		Data:        responseData,
 	}
+
+	log.Printf("SendResponse: src: %v, rsp: %v ", srcMsg, response)
 	p.SendMessage(response)
 }
 

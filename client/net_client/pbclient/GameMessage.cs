@@ -10,6 +10,8 @@ public class GameMessage
     {
         Body = body;
         Length = body.Length;
+
+        Console.WriteLine($"GameMessage body length: {Length}");
     }
 
     public byte[] Serialize()

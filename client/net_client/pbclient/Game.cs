@@ -28,33 +28,35 @@ namespace Game {
             "eRgCIAEoAhIJCgF6GAMgASgCIkQKBlBsYXllchIKCgJpZBgBIAEoCRIMCgRu",
             "YW1lGAIgASgJEiAKCHBvc2l0aW9uGAMgASgLMg4uZ2FtZS5Qb3NpdGlvbiI/",
             "CgRSb29tEgoKAmlkGAEgASgEEgwKBG5hbWUYAiABKAkSHQoHcGxheWVycxgD",
-            "IAMoCzIMLmdhbWUuUGxheWVyIg4KDExvZ2luUmVxdWVzdCIPCg1Mb2dpblJl",
-            "c3BvbnNlIhQKEkdldFJvb21MaXN0UmVxdWVzdCI9ChNHZXRSb29tTGlzdFJl",
-            "c3BvbnNlEgsKA3JldBgBIAEoBRIZCgVyb29tcxgCIAMoCzIKLmdhbWUuUm9v",
-            "bSIhChFDcmVhdGVSb29tUmVxdWVzdBIMCgRuYW1lGAEgASgJIjsKEkNyZWF0",
-            "ZVJvb21SZXNwb25zZRILCgNyZXQYASABKAUSGAoEcm9vbRgCIAEoCzIKLmdh",
-            "bWUuUm9vbSI/Cg9Kb2luUm9vbVJlcXVlc3QSHAoGcGxheWVyGAEgASgLMgwu",
-            "Z2FtZS5QbGF5ZXISDgoGcm9vbUlkGAIgASgJIjkKEEpvaW5Sb29tUmVzcG9u",
-            "c2USCwoDcmV0GAEgASgFEhgKBHJvb20YAiABKAsyCi5nYW1lLlJvb20iQQoL",
-            "TW92ZVJlcXVlc3QSEAoIcGxheWVySWQYASABKAkSIAoIcG9zaXRpb24YAiAB",
-            "KAsyDi5nYW1lLlBvc2l0aW9uIjUKDE1vdmVSZXNwb25zZRILCgNyZXQYASAB",
-            "KAUSGAoEcm9vbRgCIAEoCzIKLmdhbWUuUm9vbSIkChBMZWF2ZVJvb21SZXF1",
-            "ZXN0EhAKCHBsYXllcklkGAEgASgJIjoKEUxlYXZlUm9vbVJlc3BvbnNlEgsK",
-            "A3JldBgBIAEoBRIYCgRyb29tGAIgASgLMgouZ2FtZS5Sb29tIjEKFVJvb21T",
-            "dGF0ZU5vdGlmaWNhdGlvbhIYCgRyb29tGAEgASgLMgouZ2FtZS5Sb29tIlsK",
-            "B01lc3NhZ2USEAoIY2xpZW50SWQYASABKAkSEwoLbXNnU2VyaWFsTm8YAiAB",
-            "KAUSGwoCaWQYAyABKA4yDy5nYW1lLk1lc3NhZ2VJZBIMCgRkYXRhGAQgASgM",
-            "KmgKCUVycm9yQ29kZRIGCgJPSxAAEhIKDlJPT01fTk9UX0ZPVU5EEAESDQoJ",
-            "Uk9PTV9GVUxMEAISFAoQUExBWUVSX05PVF9GT1VORBADEhoKFlBMQVlFUl9B",
-            "TFJFQURZX0lOX1JPT00QBCq+AgoJTWVzc2FnZUlkEhEKDUxPR0lOX1JFUVVF",
-            "U1QQABISCg5MT0dJTl9SRVNQT05TRRABEhkKFUdFVF9ST09NX0xJU1RfUkVR",
-            "VUVTVBACEhoKFkdFVF9ST09NX0xJU1RfUkVTUE9OU0UQAxIXChNDUkVBVEVf",
-            "Uk9PTV9SRVFVRVNUEAQSGAoUQ1JFQVRFX1JPT01fUkVTUE9OU0UQBRIVChFK",
-            "T0lOX1JPT01fUkVRVUVTVBAGEhYKEkpPSU5fUk9PTV9SRVNQT05TRRAHEhAK",
-            "DE1PVkVfUkVRVUVTVBAIEhEKDU1PVkVfUkVTUE9OU0UQCRIWChJMRUFWRV9S",
-            "T09NX1JFUVVFU1QQChIXChNMRUFWRV9ST09NX1JFU1BPTlNFEAsSGwoXUk9P",
-            "TV9TVEFURV9OT1RJRklDQVRJT04QDEISWhBzZXJ2ZXIvc3JjL3Byb3RvYgZw",
-            "cm90bzM="));
+            "IAMoCzIMLmdhbWUuUGxheWVyIg4KDExvZ2luUmVxdWVzdCIhCg1Mb2dpblJl",
+            "c3BvbnNlEhAKCHBsYXllcklkGAEgASgJIhQKEkdldFJvb21MaXN0UmVxdWVz",
+            "dCJOChNHZXRSb29tTGlzdFJlc3BvbnNlEhwKA3JldBgBIAEoDjIPLmdhbWUu",
+            "RXJyb3JDb2RlEhkKBXJvb21zGAIgAygLMgouZ2FtZS5Sb29tIiEKEUNyZWF0",
+            "ZVJvb21SZXF1ZXN0EgwKBG5hbWUYASABKAkiTAoSQ3JlYXRlUm9vbVJlc3Bv",
+            "bnNlEhwKA3JldBgBIAEoDjIPLmdhbWUuRXJyb3JDb2RlEhgKBHJvb20YAiAB",
+            "KAsyCi5nYW1lLlJvb20iPwoPSm9pblJvb21SZXF1ZXN0EhwKBnBsYXllchgB",
+            "IAEoCzIMLmdhbWUuUGxheWVyEg4KBnJvb21JZBgCIAEoCSJKChBKb2luUm9v",
+            "bVJlc3BvbnNlEhwKA3JldBgBIAEoDjIPLmdhbWUuRXJyb3JDb2RlEhgKBHJv",
+            "b20YAiABKAsyCi5nYW1lLlJvb20iQQoLTW92ZVJlcXVlc3QSEAoIcGxheWVy",
+            "SWQYASABKAkSIAoIcG9zaXRpb24YAiABKAsyDi5nYW1lLlBvc2l0aW9uIkYK",
+            "DE1vdmVSZXNwb25zZRIcCgNyZXQYASABKA4yDy5nYW1lLkVycm9yQ29kZRIY",
+            "CgRyb29tGAIgASgLMgouZ2FtZS5Sb29tIiQKEExlYXZlUm9vbVJlcXVlc3QS",
+            "EAoIcGxheWVySWQYASABKAkiSwoRTGVhdmVSb29tUmVzcG9uc2USHAoDcmV0",
+            "GAEgASgOMg8uZ2FtZS5FcnJvckNvZGUSGAoEcm9vbRgCIAEoCzIKLmdhbWUu",
+            "Um9vbSIxChVSb29tU3RhdGVOb3RpZmljYXRpb24SGAoEcm9vbRgBIAEoCzIK",
+            "LmdhbWUuUm9vbSJbCgdNZXNzYWdlEhAKCGNsaWVudElkGAEgASgJEhMKC21z",
+            "Z1NlcmlhbE5vGAIgASgFEhsKAmlkGAMgASgOMg8uZ2FtZS5NZXNzYWdlSWQS",
+            "DAoEZGF0YRgEIAEoDCpoCglFcnJvckNvZGUSBgoCT0sQABISCg5ST09NX05P",
+            "VF9GT1VORBABEg0KCVJPT01fRlVMTBACEhQKEFBMQVlFUl9OT1RfRk9VTkQQ",
+            "AxIaChZQTEFZRVJfQUxSRUFEWV9JTl9ST09NEAQqvgIKCU1lc3NhZ2VJZBIR",
+            "Cg1MT0dJTl9SRVFVRVNUEAASEgoOTE9HSU5fUkVTUE9OU0UQARIZChVHRVRf",
+            "Uk9PTV9MSVNUX1JFUVVFU1QQAhIaChZHRVRfUk9PTV9MSVNUX1JFU1BPTlNF",
+            "EAMSFwoTQ1JFQVRFX1JPT01fUkVRVUVTVBAEEhgKFENSRUFURV9ST09NX1JF",
+            "U1BPTlNFEAUSFQoRSk9JTl9ST09NX1JFUVVFU1QQBhIWChJKT0lOX1JPT01f",
+            "UkVTUE9OU0UQBxIQCgxNT1ZFX1JFUVVFU1QQCBIRCg1NT1ZFX1JFU1BPTlNF",
+            "EAkSFgoSTEVBVkVfUk9PTV9SRVFVRVNUEAoSFwoTTEVBVkVfUk9PTV9SRVNQ",
+            "T05TRRALEhsKF1JPT01fU1RBVEVfTk9USUZJQ0FUSU9OEAxCEloQc2VydmVy",
+            "L3NyYy9wcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Game.ErrorCode), typeof(global::Game.MessageId), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -62,7 +64,7 @@ namespace Game {
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Player), global::Game.Player.Parser, new[]{ "Id", "Name", "Position" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Room), global::Game.Room.Parser, new[]{ "Id", "Name", "Players" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.LoginRequest), global::Game.LoginRequest.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.LoginResponse), global::Game.LoginResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.LoginResponse), global::Game.LoginResponse.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.GetRoomListRequest), global::Game.GetRoomListRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.GetRoomListResponse), global::Game.GetRoomListResponse.Parser, new[]{ "Ret", "Rooms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.CreateRoomRequest), global::Game.CreateRoomRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -1118,6 +1120,7 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoginResponse(LoginResponse other) : this() {
+      playerId_ = other.playerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1125,6 +1128,18 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoginResponse Clone() {
       return new LoginResponse(this);
+    }
+
+    /// <summary>Field number for the "playerId" field.</summary>
+    public const int PlayerIdFieldNumber = 1;
+    private string playerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlayerId {
+      get { return playerId_; }
+      set {
+        playerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1142,6 +1157,7 @@ namespace Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PlayerId != other.PlayerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1149,6 +1165,7 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PlayerId.Length != 0) hash ^= PlayerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1167,6 +1184,10 @@ namespace Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1177,6 +1198,10 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1187,6 +1212,9 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PlayerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1198,6 +1226,9 @@ namespace Game {
     public void MergeFrom(LoginResponse other) {
       if (other == null) {
         return;
+      }
+      if (other.PlayerId.Length != 0) {
+        PlayerId = other.PlayerId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1218,6 +1249,10 @@ namespace Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            PlayerId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1237,6 +1272,10 @@ namespace Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            PlayerId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1453,10 +1492,10 @@ namespace Game {
 
     /// <summary>Field number for the "ret" field.</summary>
     public const int RetFieldNumber = 1;
-    private int ret_;
+    private global::Game.ErrorCode ret_ = global::Game.ErrorCode.Ok;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Ret {
+    public global::Game.ErrorCode Ret {
       get { return ret_; }
       set {
         ret_ = value;
@@ -1498,7 +1537,7 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Ret != 0) hash ^= Ret.GetHashCode();
+      if (Ret != global::Game.ErrorCode.Ok) hash ^= Ret.GetHashCode();
       hash ^= rooms_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1518,9 +1557,9 @@ namespace Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       rooms_.WriteTo(output, _repeated_rooms_codec);
       if (_unknownFields != null) {
@@ -1533,9 +1572,9 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       rooms_.WriteTo(ref output, _repeated_rooms_codec);
       if (_unknownFields != null) {
@@ -1548,8 +1587,8 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Ret != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Ret);
+      if (Ret != global::Game.ErrorCode.Ok) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Ret);
       }
       size += rooms_.CalculateSize(_repeated_rooms_codec);
       if (_unknownFields != null) {
@@ -1564,7 +1603,7 @@ namespace Game {
       if (other == null) {
         return;
       }
-      if (other.Ret != 0) {
+      if (other.Ret != global::Game.ErrorCode.Ok) {
         Ret = other.Ret;
       }
       rooms_.Add(other.rooms_);
@@ -1588,7 +1627,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -1615,7 +1654,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -1875,10 +1914,10 @@ namespace Game {
 
     /// <summary>Field number for the "ret" field.</summary>
     public const int RetFieldNumber = 1;
-    private int ret_;
+    private global::Game.ErrorCode ret_ = global::Game.ErrorCode.Ok;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Ret {
+    public global::Game.ErrorCode Ret {
       get { return ret_; }
       set {
         ret_ = value;
@@ -1921,7 +1960,7 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Ret != 0) hash ^= Ret.GetHashCode();
+      if (Ret != global::Game.ErrorCode.Ok) hash ^= Ret.GetHashCode();
       if (room_ != null) hash ^= Room.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1941,9 +1980,9 @@ namespace Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -1959,9 +1998,9 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -1977,8 +2016,8 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Ret != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Ret);
+      if (Ret != global::Game.ErrorCode.Ok) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Ret);
       }
       if (room_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Room);
@@ -1995,7 +2034,7 @@ namespace Game {
       if (other == null) {
         return;
       }
-      if (other.Ret != 0) {
+      if (other.Ret != global::Game.ErrorCode.Ok) {
         Ret = other.Ret;
       }
       if (other.room_ != null) {
@@ -2024,7 +2063,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2054,7 +2093,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2363,10 +2402,10 @@ namespace Game {
 
     /// <summary>Field number for the "ret" field.</summary>
     public const int RetFieldNumber = 1;
-    private int ret_;
+    private global::Game.ErrorCode ret_ = global::Game.ErrorCode.Ok;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Ret {
+    public global::Game.ErrorCode Ret {
       get { return ret_; }
       set {
         ret_ = value;
@@ -2409,7 +2448,7 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Ret != 0) hash ^= Ret.GetHashCode();
+      if (Ret != global::Game.ErrorCode.Ok) hash ^= Ret.GetHashCode();
       if (room_ != null) hash ^= Room.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2429,9 +2468,9 @@ namespace Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -2447,9 +2486,9 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -2465,8 +2504,8 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Ret != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Ret);
+      if (Ret != global::Game.ErrorCode.Ok) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Ret);
       }
       if (room_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Room);
@@ -2483,7 +2522,7 @@ namespace Game {
       if (other == null) {
         return;
       }
-      if (other.Ret != 0) {
+      if (other.Ret != global::Game.ErrorCode.Ok) {
         Ret = other.Ret;
       }
       if (other.room_ != null) {
@@ -2512,7 +2551,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2542,7 +2581,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -2851,10 +2890,10 @@ namespace Game {
 
     /// <summary>Field number for the "ret" field.</summary>
     public const int RetFieldNumber = 1;
-    private int ret_;
+    private global::Game.ErrorCode ret_ = global::Game.ErrorCode.Ok;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Ret {
+    public global::Game.ErrorCode Ret {
       get { return ret_; }
       set {
         ret_ = value;
@@ -2897,7 +2936,7 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Ret != 0) hash ^= Ret.GetHashCode();
+      if (Ret != global::Game.ErrorCode.Ok) hash ^= Ret.GetHashCode();
       if (room_ != null) hash ^= Room.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2917,9 +2956,9 @@ namespace Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -2935,9 +2974,9 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -2953,8 +2992,8 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Ret != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Ret);
+      if (Ret != global::Game.ErrorCode.Ok) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Ret);
       }
       if (room_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Room);
@@ -2971,7 +3010,7 @@ namespace Game {
       if (other == null) {
         return;
       }
-      if (other.Ret != 0) {
+      if (other.Ret != global::Game.ErrorCode.Ok) {
         Ret = other.Ret;
       }
       if (other.room_ != null) {
@@ -3000,7 +3039,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3030,7 +3069,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3293,10 +3332,10 @@ namespace Game {
 
     /// <summary>Field number for the "ret" field.</summary>
     public const int RetFieldNumber = 1;
-    private int ret_;
+    private global::Game.ErrorCode ret_ = global::Game.ErrorCode.Ok;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Ret {
+    public global::Game.ErrorCode Ret {
       get { return ret_; }
       set {
         ret_ = value;
@@ -3339,7 +3378,7 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Ret != 0) hash ^= Ret.GetHashCode();
+      if (Ret != global::Game.ErrorCode.Ok) hash ^= Ret.GetHashCode();
       if (room_ != null) hash ^= Room.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3359,9 +3398,9 @@ namespace Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -3377,9 +3416,9 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Ret != 0) {
+      if (Ret != global::Game.ErrorCode.Ok) {
         output.WriteRawTag(8);
-        output.WriteInt32(Ret);
+        output.WriteEnum((int) Ret);
       }
       if (room_ != null) {
         output.WriteRawTag(18);
@@ -3395,8 +3434,8 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Ret != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Ret);
+      if (Ret != global::Game.ErrorCode.Ok) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Ret);
       }
       if (room_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Room);
@@ -3413,7 +3452,7 @@ namespace Game {
       if (other == null) {
         return;
       }
-      if (other.Ret != 0) {
+      if (other.Ret != global::Game.ErrorCode.Ok) {
         Ret = other.Ret;
       }
       if (other.room_ != null) {
@@ -3442,7 +3481,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {
@@ -3472,7 +3511,7 @@ namespace Game {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Ret = input.ReadInt32();
+            Ret = (global::Game.ErrorCode) input.ReadEnum();
             break;
           }
           case 18: {

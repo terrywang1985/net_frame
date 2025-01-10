@@ -13,7 +13,7 @@ import (
 
 // Player 玩家结构体
 type Player struct {
-	ID       string
+	Id       string
 	Name     string
 	Position *pb.Position
 	Room     *Room
@@ -27,7 +27,7 @@ type Player struct {
 func NewPlayer(id string, conn net.Conn) *Player {
 
 	return &Player{
-		ID:       id,
+		Id:       id,
 		Name:     "",
 		Position: &pb.Position{X: 0, Y: 0, Z: 0},
 
@@ -44,8 +44,26 @@ func (p *Player) Run() {
 	var wg sync.WaitGroup
 	wg.Add(3) // We have three goroutines to wait for
 
-	defer p.Conn.Close()
-	defer GlobalManager.DeletePlayer(p.ID)
+	defer func() {
+		// Clean up when the player exits
+		leaveRoom := &Event{
+			Type:     EventLeaveRoom,
+			PlayerId: p.Id,
+		}
+		if p.Room != nil {
+			p.Room.EventChan <- leaveRoom
+
+			// Wait for the room to process the leave event
+			<-leaveRoom.ResponseChan
+		}
+		close(p.RecvChan)
+		close(p.SendChan)
+		close(p.QuitChan)
+		defer p.Conn.Close()
+		defer GlobalManager.DeletePlayer(p.Id)
+
+		log.Printf("Player %s exited", p.Id)
+	}()
 
 	// Goroutine to handle incoming messages
 	go func() {
@@ -87,9 +105,15 @@ func (p *Player) Run() {
 				messageBuf := buffer[4 : 4+length]
 				buffer = buffer[4+length:] // Remove processed data
 
+				var parsedMsg pb.Message
+				if err := proto.Unmarshal(messageBuf, &parsedMsg); err != nil {
+					log.Println("Invalid message:", err)
+					continue
+				}
+
 				// Attempt to send the message to RecvChan
 				select {
-				case p.RecvChan <- &pb.Message{Data: messageBuf}:
+				case p.RecvChan <- &parsedMsg:
 					// Successfully enqueued
 				default:
 					// Drop the message if the channel is full
@@ -134,17 +158,10 @@ func (p *Player) Run() {
 			case <-p.QuitChan:
 				return
 			case msg := <-p.RecvChan:
-				var parsedMsg pb.Message
-				if err := proto.Unmarshal(msg.Data, &parsedMsg); err != nil {
-					log.Println("Invalid message:", err)
-					continue
-				}
-				log.Printf("Received message: %v", parsedMsg)
+
+				log.Printf("Received message: %v", msg)
 				// Process the message (e.g., handle requests)
-				MsgHandler.PlayerHandle(p, &parsedMsg)
-				if p.Room != nil {
-					MsgHandler.RoomHandle(p.Room, &parsedMsg)
-				}
+				MsgHandler.PlayerHandle(p, msg)
 			}
 		}
 	}()
@@ -180,11 +197,56 @@ func (p *Player) HandleMoveRequest(msg *pb.Message) {
 	p.Position = req.Position
 	log.Printf("Player %s moved to: %+v", p.Name, p.Position)
 
-	p.SendResponse(msg, mustMarshal(&pb.MoveResponse{
-		Ret:  0,
+	moveEvent := &Event{
+		Type:     EventMove,
+		PlayerId: p.Id,
+		Payload:  req,
+	}
+	p.Room.EventChan <- moveEvent
+}
+
+// HandleMoveRequest 处理移动请求
+func (p *Player) HandleJoinRoomRequest(msg *pb.Message) {
+	var req pb.JoinRoomRequest
+	if err := proto.Unmarshal(msg.GetData(), &req); err != nil {
+		log.Println("Failed to parse JoinRoomReq:", err)
+		return
+	}
+
+	result := pb.ErrorCode_OK
+
+	if p.Room != nil {
+		log.Printf("Player %s already in room %s", p.Name, p.Room.Name)
+		result = pb.ErrorCode_PLAYER_ALREADY_IN_ROOM
+		goto sendResponse
+	} else {
+		room, ok := GlobalManager.GetRoom(req.RoomId)
+		if !ok {
+			log.Printf("Room %s not found", req.RoomId)
+			result = pb.ErrorCode_ROOM_NOT_FOUND
+			goto sendResponse
+		}
+		joinRoomEvent := &Event{
+			Type:     EventJoinRoom,
+			PlayerId: p.Id,
+			Payload:  req,
+		}
+		room.EventChan <- joinRoomEvent
+
+		response := <-joinRoomEvent.ResponseChan
+		if response.(*pb.JoinRoomResponse).Ret == pb.ErrorCode_OK {
+			p.Room = room
+		}
+		log.Printf("Player %s joined room: %s , ret: %d ", p.Name, room.Name, response.(*pb.JoinRoomResponse).Ret)
+		p.SendResponse(msg, mustMarshal(response.(*pb.JoinRoomResponse)))
+		return
+	}
+
+sendResponse:
+	p.SendResponse(msg, mustMarshal(&pb.JoinRoomResponse{
+		Ret:  result,
 		Room: &pb.Room{Id: p.Room.ID, Name: p.Room.Name},
 	}))
-
 }
 
 func (p *Player) HandleGetRoomListRequest(msg *pb.Message) {

@@ -26,13 +26,14 @@ message LoginRequest {
 }
 
 message LoginResponse {
+  string playerId = 1;
 }
 
 message GetRoomListRequest {
 }
 
 message GetRoomListResponse {
-  int32 ret = 1;
+  ErrorCode ret = 1;
   repeated Room rooms = 2;
 }
 
@@ -41,7 +42,7 @@ message CreateRoomRequest {
 }
 
 message CreateRoomResponse {
-  int32 ret = 1;
+  ErrorCode ret = 1;
   Room room = 2;
 }
 
@@ -51,7 +52,7 @@ message JoinRoomRequest {
 }
 
 message JoinRoomResponse {
-  int32 ret = 1;
+  ErrorCode ret = 1;
   Room room = 2;
 }
 
@@ -61,7 +62,7 @@ message MoveRequest {
 }
 
 message MoveResponse {
-  int32 ret = 1;
+  ErrorCode ret = 1;
   Room room = 2;
 }
 
@@ -70,7 +71,7 @@ message LeaveRoomRequest {
 }
 
 message LeaveRoomResponse {
-  int32 ret = 1;
+  ErrorCode ret = 1;
   Room room = 2;
 }
 

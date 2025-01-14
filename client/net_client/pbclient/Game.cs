@@ -28,42 +28,42 @@ namespace Game {
             "eRgCIAEoAhIJCgF6GAMgASgCIkQKBlBsYXllchIKCgJpZBgBIAEoCRIMCgRu",
             "YW1lGAIgASgJEiAKCHBvc2l0aW9uGAMgASgLMg4uZ2FtZS5Qb3NpdGlvbiI/",
             "CgRSb29tEgoKAmlkGAEgASgEEgwKBG5hbWUYAiABKAkSHQoHcGxheWVycxgD",
-            "IAMoCzIMLmdhbWUuUGxheWVyIg4KDExvZ2luUmVxdWVzdCIhCg1Mb2dpblJl",
-            "c3BvbnNlEhAKCHBsYXllcklkGAEgASgJIhQKEkdldFJvb21MaXN0UmVxdWVz",
-            "dCJOChNHZXRSb29tTGlzdFJlc3BvbnNlEhwKA3JldBgBIAEoDjIPLmdhbWUu",
-            "RXJyb3JDb2RlEhkKBXJvb21zGAIgAygLMgouZ2FtZS5Sb29tIiEKEUNyZWF0",
-            "ZVJvb21SZXF1ZXN0EgwKBG5hbWUYASABKAkiTAoSQ3JlYXRlUm9vbVJlc3Bv",
-            "bnNlEhwKA3JldBgBIAEoDjIPLmdhbWUuRXJyb3JDb2RlEhgKBHJvb20YAiAB",
-            "KAsyCi5nYW1lLlJvb20iPwoPSm9pblJvb21SZXF1ZXN0EhwKBnBsYXllchgB",
-            "IAEoCzIMLmdhbWUuUGxheWVyEg4KBnJvb21JZBgCIAEoCSJKChBKb2luUm9v",
-            "bVJlc3BvbnNlEhwKA3JldBgBIAEoDjIPLmdhbWUuRXJyb3JDb2RlEhgKBHJv",
-            "b20YAiABKAsyCi5nYW1lLlJvb20iQQoLTW92ZVJlcXVlc3QSEAoIcGxheWVy",
-            "SWQYASABKAkSIAoIcG9zaXRpb24YAiABKAsyDi5nYW1lLlBvc2l0aW9uIkYK",
-            "DE1vdmVSZXNwb25zZRIcCgNyZXQYASABKA4yDy5nYW1lLkVycm9yQ29kZRIY",
-            "CgRyb29tGAIgASgLMgouZ2FtZS5Sb29tIiQKEExlYXZlUm9vbVJlcXVlc3QS",
-            "EAoIcGxheWVySWQYASABKAkiSwoRTGVhdmVSb29tUmVzcG9uc2USHAoDcmV0",
-            "GAEgASgOMg8uZ2FtZS5FcnJvckNvZGUSGAoEcm9vbRgCIAEoCzIKLmdhbWUu",
-            "Um9vbSIxChVSb29tU3RhdGVOb3RpZmljYXRpb24SGAoEcm9vbRgBIAEoCzIK",
-            "LmdhbWUuUm9vbSJbCgdNZXNzYWdlEhAKCGNsaWVudElkGAEgASgJEhMKC21z",
-            "Z1NlcmlhbE5vGAIgASgFEhsKAmlkGAMgASgOMg8uZ2FtZS5NZXNzYWdlSWQS",
-            "DAoEZGF0YRgEIAEoDCpoCglFcnJvckNvZGUSBgoCT0sQABISCg5ST09NX05P",
-            "VF9GT1VORBABEg0KCVJPT01fRlVMTBACEhQKEFBMQVlFUl9OT1RfRk9VTkQQ",
-            "AxIaChZQTEFZRVJfQUxSRUFEWV9JTl9ST09NEAQqvgIKCU1lc3NhZ2VJZBIR",
-            "Cg1MT0dJTl9SRVFVRVNUEAASEgoOTE9HSU5fUkVTUE9OU0UQARIZChVHRVRf",
-            "Uk9PTV9MSVNUX1JFUVVFU1QQAhIaChZHRVRfUk9PTV9MSVNUX1JFU1BPTlNF",
-            "EAMSFwoTQ1JFQVRFX1JPT01fUkVRVUVTVBAEEhgKFENSRUFURV9ST09NX1JF",
-            "U1BPTlNFEAUSFQoRSk9JTl9ST09NX1JFUVVFU1QQBhIWChJKT0lOX1JPT01f",
-            "UkVTUE9OU0UQBxIQCgxNT1ZFX1JFUVVFU1QQCBIRCg1NT1ZFX1JFU1BPTlNF",
-            "EAkSFgoSTEVBVkVfUk9PTV9SRVFVRVNUEAoSFwoTTEVBVkVfUk9PTV9SRVNQ",
-            "T05TRRALEhsKF1JPT01fU1RBVEVfTk9USUZJQ0FUSU9OEAxCEloQc2VydmVy",
-            "L3NyYy9wcm90b2IGcHJvdG8z"));
+            "IAMoCzIMLmdhbWUuUGxheWVyIiIKDExvZ2luUmVxdWVzdBISCgpwbGF5ZXJO",
+            "YW1lGAEgASgJIiEKDUxvZ2luUmVzcG9uc2USEAoIcGxheWVySWQYASABKAki",
+            "FAoSR2V0Um9vbUxpc3RSZXF1ZXN0Ik4KE0dldFJvb21MaXN0UmVzcG9uc2US",
+            "HAoDcmV0GAEgASgOMg8uZ2FtZS5FcnJvckNvZGUSGQoFcm9vbXMYAiADKAsy",
+            "Ci5nYW1lLlJvb20iIQoRQ3JlYXRlUm9vbVJlcXVlc3QSDAoEbmFtZRgBIAEo",
+            "CSJMChJDcmVhdGVSb29tUmVzcG9uc2USHAoDcmV0GAEgASgOMg8uZ2FtZS5F",
+            "cnJvckNvZGUSGAoEcm9vbRgCIAEoCzIKLmdhbWUuUm9vbSI/Cg9Kb2luUm9v",
+            "bVJlcXVlc3QSHAoGcGxheWVyGAEgASgLMgwuZ2FtZS5QbGF5ZXISDgoGcm9v",
+            "bUlkGAIgASgEIkoKEEpvaW5Sb29tUmVzcG9uc2USHAoDcmV0GAEgASgOMg8u",
+            "Z2FtZS5FcnJvckNvZGUSGAoEcm9vbRgCIAEoCzIKLmdhbWUuUm9vbSJBCgtN",
+            "b3ZlUmVxdWVzdBIQCghwbGF5ZXJJZBgBIAEoCRIgCghwb3NpdGlvbhgCIAEo",
+            "CzIOLmdhbWUuUG9zaXRpb24iRgoMTW92ZVJlc3BvbnNlEhwKA3JldBgBIAEo",
+            "DjIPLmdhbWUuRXJyb3JDb2RlEhgKBHJvb20YAiABKAsyCi5nYW1lLlJvb20i",
+            "JAoQTGVhdmVSb29tUmVxdWVzdBIQCghwbGF5ZXJJZBgBIAEoCSJLChFMZWF2",
+            "ZVJvb21SZXNwb25zZRIcCgNyZXQYASABKA4yDy5nYW1lLkVycm9yQ29kZRIY",
+            "CgRyb29tGAIgASgLMgouZ2FtZS5Sb29tIjEKFVJvb21TdGF0ZU5vdGlmaWNh",
+            "dGlvbhIYCgRyb29tGAEgASgLMgouZ2FtZS5Sb29tIlsKB01lc3NhZ2USEAoI",
+            "Y2xpZW50SWQYASABKAkSEwoLbXNnU2VyaWFsTm8YAiABKAUSGwoCaWQYAyAB",
+            "KA4yDy5nYW1lLk1lc3NhZ2VJZBIMCgRkYXRhGAQgASgMKmgKCUVycm9yQ29k",
+            "ZRIGCgJPSxAAEhIKDlJPT01fTk9UX0ZPVU5EEAESDQoJUk9PTV9GVUxMEAIS",
+            "FAoQUExBWUVSX05PVF9GT1VORBADEhoKFlBMQVlFUl9BTFJFQURZX0lOX1JP",
+            "T00QBCq+AgoJTWVzc2FnZUlkEhEKDUxPR0lOX1JFUVVFU1QQABISCg5MT0dJ",
+            "Tl9SRVNQT05TRRABEhkKFUdFVF9ST09NX0xJU1RfUkVRVUVTVBACEhoKFkdF",
+            "VF9ST09NX0xJU1RfUkVTUE9OU0UQAxIXChNDUkVBVEVfUk9PTV9SRVFVRVNU",
+            "EAQSGAoUQ1JFQVRFX1JPT01fUkVTUE9OU0UQBRIVChFKT0lOX1JPT01fUkVR",
+            "VUVTVBAGEhYKEkpPSU5fUk9PTV9SRVNQT05TRRAHEhAKDE1PVkVfUkVRVUVT",
+            "VBAIEhEKDU1PVkVfUkVTUE9OU0UQCRIWChJMRUFWRV9ST09NX1JFUVVFU1QQ",
+            "ChIXChNMRUFWRV9ST09NX1JFU1BPTlNFEAsSGwoXUk9PTV9TVEFURV9OT1RJ",
+            "RklDQVRJT04QDEISWhBzZXJ2ZXIvc3JjL3Byb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Game.ErrorCode), typeof(global::Game.MessageId), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Position), global::Game.Position.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Player), global::Game.Player.Parser, new[]{ "Id", "Name", "Position" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.Room), global::Game.Room.Parser, new[]{ "Id", "Name", "Players" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Game.LoginRequest), global::Game.LoginRequest.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Game.LoginRequest), global::Game.LoginRequest.Parser, new[]{ "PlayerName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.LoginResponse), global::Game.LoginResponse.Parser, new[]{ "PlayerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.GetRoomListRequest), global::Game.GetRoomListRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Game.GetRoomListResponse), global::Game.GetRoomListResponse.Parser, new[]{ "Ret", "Rooms" }, null, null, null, null),
@@ -959,6 +959,7 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoginRequest(LoginRequest other) : this() {
+      playerName_ = other.playerName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -966,6 +967,18 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoginRequest Clone() {
       return new LoginRequest(this);
+    }
+
+    /// <summary>Field number for the "playerName" field.</summary>
+    public const int PlayerNameFieldNumber = 1;
+    private string playerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PlayerName {
+      get { return playerName_; }
+      set {
+        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -983,6 +996,7 @@ namespace Game {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PlayerName != other.PlayerName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -990,6 +1004,7 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1008,6 +1023,10 @@ namespace Game {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1018,6 +1037,10 @@ namespace Game {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PlayerName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1028,6 +1051,9 @@ namespace Game {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PlayerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1039,6 +1065,9 @@ namespace Game {
     public void MergeFrom(LoginRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.PlayerName.Length != 0) {
+        PlayerName = other.PlayerName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1059,6 +1088,10 @@ namespace Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            PlayerName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1078,6 +1111,10 @@ namespace Game {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            PlayerName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2170,13 +2207,13 @@ namespace Game {
 
     /// <summary>Field number for the "roomId" field.</summary>
     public const int RoomIdFieldNumber = 2;
-    private string roomId_ = "";
+    private ulong roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RoomId {
+    public ulong RoomId {
       get { return roomId_; }
       set {
-        roomId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        roomId_ = value;
       }
     }
 
@@ -2205,7 +2242,7 @@ namespace Game {
     public override int GetHashCode() {
       int hash = 1;
       if (player_ != null) hash ^= Player.GetHashCode();
-      if (RoomId.Length != 0) hash ^= RoomId.GetHashCode();
+      if (RoomId != 0UL) hash ^= RoomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2228,9 +2265,9 @@ namespace Game {
         output.WriteRawTag(10);
         output.WriteMessage(Player);
       }
-      if (RoomId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RoomId);
+      if (RoomId != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2246,9 +2283,9 @@ namespace Game {
         output.WriteRawTag(10);
         output.WriteMessage(Player);
       }
-      if (RoomId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(RoomId);
+      if (RoomId != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2263,8 +2300,8 @@ namespace Game {
       if (player_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Player);
       }
-      if (RoomId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomId);
+      if (RoomId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RoomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2284,7 +2321,7 @@ namespace Game {
         }
         Player.MergeFrom(other.Player);
       }
-      if (other.RoomId.Length != 0) {
+      if (other.RoomId != 0UL) {
         RoomId = other.RoomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2313,8 +2350,8 @@ namespace Game {
             input.ReadMessage(Player);
             break;
           }
-          case 18: {
-            RoomId = input.ReadString();
+          case 16: {
+            RoomId = input.ReadUInt64();
             break;
           }
         }
@@ -2343,8 +2380,8 @@ namespace Game {
             input.ReadMessage(Player);
             break;
           }
-          case 18: {
-            RoomId = input.ReadString();
+          case 16: {
+            RoomId = input.ReadUInt64();
             break;
           }
         }

@@ -23,6 +23,7 @@ message Room {
 }
 
 message LoginRequest {
+	string playerName = 1;
 }
 
 message LoginResponse {
@@ -48,7 +49,7 @@ message CreateRoomResponse {
 
 message JoinRoomRequest {
   Player player = 1;
-  string roomId = 2;
+  uint64 roomId = 2;
 }
 
 message JoinRoomResponse {

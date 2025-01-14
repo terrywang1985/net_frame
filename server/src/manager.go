@@ -32,21 +32,21 @@ func (rm *Manager) GetOrCreateRoom(id uint64, name string) *Room {
 }
 
 // 获取房间
-func (rm *Manager) GetRoom(id string) (*Room, bool) {
+func (rm *Manager) GetRoom(id uint64) (*Room, bool) {
 	room, ok := rm.rooms.Load(id) // 从 sync.Map 获取房间
 	if !ok {
-		log.Printf("Room %s not found", id)
+		log.Printf("Room %d not found", id)
 		return nil, false
 	}
 	return room.(*Room), true
 }
 
 // 删除房间
-func (rm *Manager) DeleteRoom(id string) {
+func (rm *Manager) DeleteRoom(id uint64) {
 	if room, ok := rm.GetRoom(id); ok {
 		room.QuitChan <- true // 关闭房间
 		rm.rooms.Delete(id)   // 删除房间
-		log.Printf("Room %s deleted", id)
+		log.Printf("Room %d deleted", id)
 	}
 }
 

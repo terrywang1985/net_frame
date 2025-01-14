@@ -205,6 +205,18 @@ func (p *Player) HandleMoveRequest(msg *pb.Message) {
 	p.Room.EventChan <- moveEvent
 }
 
+func (p *Player) HandleLoginRequest(msg *pb.Message) {
+	var req pb.LoginRequest
+	if err := proto.Unmarshal(msg.GetData(), &req); err != nil {
+		log.Println("Failed to parse Login Request:", err)
+		return
+	}
+
+	p.SendResponse(msg, mustMarshal(&pb.LoginResponse{
+		PlayerId: p.Id,
+	}))
+}
+
 // HandleMoveRequest 处理移动请求
 func (p *Player) HandleJoinRoomRequest(msg *pb.Message) {
 	var req pb.JoinRoomRequest
